@@ -1,0 +1,29 @@
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  // overflow: hidden;
+  // scroll-behavior:smooth写在滚动容器元素上，可以让容器（非鼠标手势触发）的滚动变得平滑
+  scroll-behavior: smooth;
+}
+
+p {
+  margin: 0;
+}
+
+// 使用“appearance”属性对任何元素的渲染风格改变
+// 去除 input[type='number'] 上下箭头
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+// https://gist.github.com/kentcdodds/6251096
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+}

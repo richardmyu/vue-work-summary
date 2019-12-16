@@ -1,0 +1,136 @@
+$border-line: 1px solid #ddd;
+
+@mixin text-align($direction) {
+  text-align: $direction;
+}
+@mixin box-type($type: border-box) {
+  box-sizing: $type;
+}
+
+.s-text-left {
+  @include text-align(left);
+}
+.s-text-right {
+  @include text-align(right);
+}
+.s-text-center {
+  @include text-align(center);
+}
+
+.s-full-h {
+  height: 100%;
+}
+
+.s-no-margin {
+  margin: 0 !important;
+}
+
+.s-no-padding {
+  padding: 0 !important;
+}
+
+// .padding-2 ~ 40
+@for $i from 2 through 40 {
+  .s-padding-#{$i} {
+    padding: #{$i}px !important;
+    @include box-type;
+  }
+}
+
+@for $i from 2 through 40 {
+  .s-pd-l-#{$i} {
+    padding-left: #{$i}px !important;
+    @include box-type;
+  }
+}
+@for $i from 2 through 40 {
+  .s-pd-r-#{$i} {
+    padding-right: #{$i}px !important;
+    @include box-type;
+  }
+}
+@for $i from 2 through 40 {
+  .s-pd-t-#{$i} {
+    padding-top: #{$i}px !important;
+    @include box-type;
+  }
+}
+@for $i from 2 through 40 {
+  .s-pd-b-#{$i} {
+    padding-bottom: #{$i}px !important;
+    @include box-type;
+  }
+}
+
+// .margin-2 ~ 40
+@for $i from 5 through 40 {
+  .s-margin-#{$i} {
+    margin: #{$i}px !important;
+  }
+}
+
+@for $i from 5 through 40 {
+  .s-mg-l-#{$i} {
+    margin-left: #{$i}px !important;
+  }
+}
+
+@for $i from 5 through 40 {
+  .s-mg-t-#{$i} {
+    margin-top: #{$i}px !important;
+  }
+}
+
+@for $i from 5 through 40 {
+  .s-mg-r-#{$i} {
+    margin-right: #{$i}px !important;
+  }
+}
+
+@for $i from 5 through 40 {
+  .s-mg-b-#{$i} {
+    margin-bottom: #{$i}px !important;
+  }
+}
+// .width 20 ~ 500 以5递增
+@for $i from 20 through 500 {
+  @if $i % 5 == 0 {
+    .s-w-#{$i} {
+      width: #{$i}px !important;
+    }
+  }
+}
+
+.s-cp {
+  cursor: pointer !important;
+}
+
+.s-fw-b {
+  font-weight: bold !important;
+}
+
+@for $i from 10 through 20 {
+  .fs-#{$i} {
+    font-size: #{$i}px !important;
+  }
+}
+
+.s-base-border {
+  border: $border-line;
+}
+
+.s-border-b {
+  border-bottom: $border-line;
+}
+
+.s-border-t {
+  border-top: $border-line;
+}
+
+.s-border-r {
+  border-right: $border-line;
+}
+
+.s-border-l {
+  border-left: $border-line;
+}
