@@ -5,6 +5,7 @@
     :inactive-value="1"
     :active-value="0"
     @change="handleChange"
+    @input="handleInput"
   />
 </template>
 
@@ -19,7 +20,11 @@ export default {
     }
   },
   methods: {
+    handleInput(val) {
+      console.log('input', val)
+    },
     handleChange(val) {
+      console.log('input', val)
       this.old = this.state
       this.loading = true
       const h = this.$createElement

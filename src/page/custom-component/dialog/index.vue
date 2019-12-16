@@ -7,20 +7,20 @@
 </template>
 
 <script>
-import firDialog from "./fir-dialog";
+import firDialog from './fir-dialog'
 export default {
   data() {
-    return {};
+    return {}
   },
   components: {
     firDialog
   },
   methods: {
     handleOpen() {
-      this.$refs.firDialog.open();
+      this.$refs.firDialog.open()
     }
   }
-};
+}
 </script>
 
 <style scoped lang=''></style>
