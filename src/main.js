@@ -4,8 +4,8 @@ import Element from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
 // kr-filter
-import krFilter from 'kr-filter'
-import 'kr-filter/lib/kr-filter.css'
+// import krFilter from 'kr-filter'
+// import 'kr-filter/lib/kr-filter.css'
 
 // 公共样式
 import '@/assets/style/normal.css'
@@ -30,7 +30,7 @@ import normalizeMoney from '@/plugins/filter/normalizeMoney'
 import focus from '@/plugins/directive/focus'
 
 Vue.use(Element)
-Vue.use(krFilter)
+// Vue.use(krFilter)
 Vue.use(D2Crud)
 Vue.use(normalizeMoney)
 Vue.use(focus)

@@ -41,8 +41,6 @@ export default dynamicRoutes => {
     ]
   })
   router.beforeEach(async (to, from, next) => {
-    // console.log('to', to.fullPath)
-    // console.log('from', from.fullPath)
     store.commit('yuSys/menu/SET_BREADCRUMB', to.fullPath.slice(1).split('/'))
     // 从其他页面跳往主页
     if (to.path === '/home') {

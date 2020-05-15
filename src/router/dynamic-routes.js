@@ -14,11 +14,9 @@ export const generateDynamicRouting = allowIds => {
         item.name = generalName
         item.component = item.component(generalName)
       }
-      // console.log('dy', item.component)
       return item
     })
   }
-  // console.log('frameInChildren', frameInChildren)
   return [
     {
       path: '/',

@@ -12,7 +12,6 @@
     "core-js": "^2.6.5",
     "element-ui": "^2.12.0",
     "flex.css": "1.1.7",
-    "kr-filter": "^0.1.1",
     "localforage": "^1.7.3",
     "lodash": "^4.17.15",
     "nprogress": "0.2.0",
@@ -37,7 +36,6 @@
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "vue-template-compiler": "^2.6.10",
-    "webpack-api-mocker": "1.6.0",
     "workbox-webpack-plugin": "3.6.3"
   }
 }

@@ -69,12 +69,12 @@ const MAPS = [
     title: 'component',
     pid: null
   },
-  {
-    id: '3-1',
-    title: 'kr-filter',
-    path: `${CUSTOMCOMPONENT_PATH}kr-filter`,
-    pid: '3'
-  },
+  // {
+  //   id: '3-1',
+  //   title: 'kr-filter',
+  //   path: `${CUSTOMCOMPONENT_PATH}kr-filter`,
+  //   pid: '3'
+  // },
   {
     id: '3-2',
     title: 'd2-crud',
