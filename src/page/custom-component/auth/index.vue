@@ -153,24 +153,24 @@ export default {
      * @description 获取表格数据，并绑定数据
      */
     async handleFetch(item = {}) {
-      this.loading = true
-      let queryParam = this.defaultParams
-      let { key, value } = item
-      if (key && value) {
-        queryParam = {
-          ...this.defaultParams,
-          [key]: value
-        }
-      }
-      const data = await getAuths(queryParam)
-      this.loading = false
-      if (!data) {
-        this.total = 0
-        this.tableData = []
-        return
-      }
-      this.total = data.total || 0
-      this.tableData = data.content || []
+      // this.loading = true
+      // let queryParam = this.defaultParams
+      // let { key, value } = item
+      // if (key && value) {
+      //   queryParam = {
+      //     ...this.defaultParams,
+      //     [key]: value
+      //   }
+      // }
+      // const data = await getAuths(queryParam)
+      // this.loading = false
+      // if (!data) {
+      //   this.total = 0
+      //   this.tableData = []
+      //   return
+      // }
+      // this.total = data.total || 0
+      // this.tableData = data.content || []
     },
     /**
      * @description 切换每页条数，重置当前页
@@ -281,10 +281,7 @@ export default {
           return item.label
         } else if (type === 'lTov' && item.label === key) {
           return item.value
-        } else if (
-          type === 'all' &&
-          (item.value === key && item.label === key)
-        ) {
+        } else if (type === 'all' && item.value === key && item.label === key) {
           return item
         }
       }

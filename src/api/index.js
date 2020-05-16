@@ -7,11 +7,11 @@ export const getTableData = ({ page, pageSize }) =>
 // 获取 page 表格
 export const getPageData = ({ page, pageSize }) =>
   GET(`/getPage?page=${page}&pageSize=${pageSize}`)
-// 新增page
+// 新增 page
 export const postPageData = data => POST('/getPage', data)
-// 修改page
+// 修改 page
 export const putPageData = data => PUT(`/getPage?id=${data.id}`, data)
-// 删除page
+// 删除 page
 export const deletePageData = id => DELETE(`/getPage?id=${id}`)
 
 export const getAuths = ({
@@ -48,5 +48,3 @@ export const getAuths = ({
 
 export const postAuth = data => PUT(`/getAuths?id=${data.id}`, data)
 
-// test post
-export const postTableData = data => POST('/setTable', data)

@@ -89,24 +89,23 @@ export default {
      * @description 获取表格数据，并绑定数据
      */
     async handleFetch() {
-      this.loading = true
-      const data = await getPageData(this.defaultParams)
-      this.loading = false
-      if (!data) {
-        this.total = 0
-        this.tableData = []
-        return
-      }
-
-      this.$nextTick(() => {
-        try {
-          this.total = data.total || 0
-          this.items = data.content || []
-          this.$refs.d2Crud.setFirstRowSelected()
-        } catch (err) {
-          console.error('try setFirstRowSelected', err)
-        }
-      })
+      // this.loading = true
+      // const data = await getPageData(this.defaultParams)
+      // this.loading = false
+      // if (!data) {
+      //   this.total = 0
+      //   this.tableData = []
+      //   return
+      // }
+      // this.$nextTick(() => {
+      //   try {
+      //     this.total = data.total || 0
+      //     this.items = data.content || []
+      //     this.$refs.d2Crud.setFirstRowSelected()
+      //   } catch (err) {
+      //     console.error('try setFirstRowSelected', err)
+      //   }
+      // })
     },
     /**
      * @description 切换每页条数，重置当前页
@@ -165,8 +164,8 @@ export default {
      * @description 删除
      */
     async handleRemove(id) {
-      await deletePageData(id)
-      await this.handleFetch()
+      // await deletePageData(id)
+      // await this.handleFetch()
     },
     /**
      * @description 修改

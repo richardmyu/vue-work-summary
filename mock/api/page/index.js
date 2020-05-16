@@ -1,18 +1,11 @@
 const Mock = require('mockjs')
 const Random = Mock.Random
 
-module.esports = {
-  'GET /api/getTable(.*)': (req, res) => {
-    console.log(req, res)
-
-    const newData = {
-      content: 'data',
-      total: 12,
-      code: '0001',
-      success: true
-    }
-    return Mock.mock(newData)
-  }
+module.exports = {
+	'GET /api/getPage': (req, res) => {
+		console.log(req.query)
+		const { page, pageSize } = req.query
+	}
 }
 
 // pageData
@@ -79,10 +72,6 @@ module.esports = {
 //     success: true
 //   }
 //   return Mock.mock(newData)
-// })
-
-// Mock.mock('/setTable', options => {
-//   return Mock.mock('is ok')
 // })
 
 // Mock.mock(

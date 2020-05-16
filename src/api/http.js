@@ -1,7 +1,9 @@
-import axios from 'axios'
+import axios, { isCancel as IsCancel } from 'axios'
+
 axios.defaults.headers.post['Content-Type'] =
   'application/x-www-form-urlencoded;charset=UTF-8'
-const baseURI = '/api'
+
+const baseURI = 'http://127.0.0.1:8080/api'
 
 /**
  * @description GET
@@ -16,7 +18,7 @@ export function GET(url, params) {
         resolve(res.data)
       })
       .catch(err => {
-        reject(err.data)
+        reject(err)
       })
   })
 }
@@ -34,7 +36,7 @@ export function POST(url, params) {
         resolve(res.data)
       })
       .catch(err => {
-        reject(err.data)
+        reject(err)
       })
   })
 }
@@ -52,7 +54,7 @@ export function PUT(url, params) {
         resolve(res.data)
       })
       .catch(err => {
-        reject(err.data)
+        reject(err)
       })
   })
 }
@@ -70,7 +72,7 @@ export function DELETE(url, params) {
         resolve(res.data)
       })
       .catch(err => {
-        reject(err.data)
+        reject(err)
       })
   })
 }

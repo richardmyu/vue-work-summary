@@ -1,6 +1,6 @@
 const WorkboxPlugin = require('workbox-webpack-plugin')
 const { resolve } = require('path')
-const apiMocker = require('webpack-api-mocker')
+const apiMocker = require('mocker-api')
 
 function createPlugin() {
   return [
@@ -35,9 +35,13 @@ module.exports = {
       }
     }
   },
+
+  // 部署应用包时的基本 URL。用法和 webpack 本身的 output.publicPath 一致
   publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   lintOnSave: true,
   productionSourceMap: false,
+
+  // webpack config
   configureWebpack: {
     devtool: 'source-map', // 需要调试则的打开注释
     output: {

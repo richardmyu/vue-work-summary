@@ -51,7 +51,7 @@
             <el-breadcrumb-item v-if="breadcrumbs[2]">{{breadcrumbs[2]}}</el-breadcrumb-item>
           </el-breadcrumb>
         </div>
-        <div flex-box="1">
+        <div flex-box="1" class="main-content">
           <router-view></router-view>
         </div>
       </div>
@@ -114,6 +114,11 @@ $nav-height: 80px;
   .el-main.home__content {
     display: flex;
     .ho-content {
+      .main-content {
+        & > div {
+          height: 100%;
+        }
+      }
       .ho-breadcrumb {
         .el-breadcrumb {
           .el-breadcrumb__item {

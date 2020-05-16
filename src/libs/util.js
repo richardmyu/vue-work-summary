@@ -32,24 +32,6 @@ export const recursion = (data, primaryKey, key, value, sortFn = null) => {
 }
 
 /**
- * 根据获取默认path
- * @param o Menu
- */
-export const getDepthPath = o => {
-  if (o.path) {
-    return o.path
-  }
-  if (o.children && o.children.length > 0) {
-    // 为什么取第一个???
-    if (!o.children[0].path) {
-      return getDepthPath(o.children[0])
-    }
-    return o.children[0].path
-  }
-  return '/error-forbidden'
-}
-
-/**
  * @description 时间格式化
  */
 export const dateFormat = (value, fmt = 'yyyy-MM-dd hh:mm:ss') => {

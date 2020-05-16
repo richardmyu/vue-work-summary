@@ -6,6 +6,14 @@ const mockPath = join(__dirname + '/api')
 
 const delay = require('./delay')
 
+const mock = {
+  _proxy: {
+    proxy: {
+      '/api': 'http://127.0.0.1:8080/'
+    }
+  }
+}
+
 /**
  *
  * @param startPath  起始目录文件夹路径
@@ -23,16 +31,19 @@ function findSync(startPath) {
       // 获取更详细的信息，用以区分文件和文件夹
       let stats = fs.statSync(fPath)
       // 目录/文件夹
-      if (stats.isDirectory()) finder(fPath)
+      if (stats.isDirectory()) {
+        finder(fPath)
+      }
       // 文件
-      if (stats.isFile()) result.push(fPath)
+      if (stats.isFile()) {
+        result.push(fPath)
+      }
     })
   }
   finder(startPath)
   return result
 }
 
-const mock = {}
 
 findSync(mockPath).forEach(file => {
   const ret = require(file)
@@ -61,4 +72,4 @@ findSync(mockPath).forEach(file => {
   }
   Object.assign(mock, require(file))
 })
-module.exports = delay(mock)
+module.exports = delay(mock, '90')

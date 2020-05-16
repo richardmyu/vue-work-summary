@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "vue-cli-service  serve --host 0.0.0.0 --open",
-    "build": "vue-cli-service build",
+    "dev": "vue-cli-service  serve --host 0.0.0.0 --port 8080 --open",
+    "build": "vue-cli-service build --report-json --mode production && node minifier",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "css-loader": "^3.2.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "mocker-api": "^2.1.0",
     "mockjs": "^1.0.1-beta3",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",

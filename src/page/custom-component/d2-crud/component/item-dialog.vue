@@ -99,43 +99,43 @@ export default {
     async handleSubmit() {
       this.submiting = true
 
-      if (this.title === '新增') {
-        const formData = {
-          ...this.createForm
-        }
+      // if (this.title === '新增') {
+      //   const formData = {
+      //     ...this.createForm
+      //   }
 
-        let { success, code } = await postPageData(formData)
-        if (success && code === '0001') {
-          this.submiting = false
-          this.visible = false
-          this.$emit('refresh')
-          this.createForm = initForm()
-        } else {
-          this.$message({
-            message: '修改失败',
-            type: 'error'
-          })
-        }
-      }
-      if (this.title === '修改') {
-        const formData = {
-          ...this.formItem,
-          ...this.createForm
-        }
-        console.log('formData', formData)
-        let { success, code } = await putPageData(formData)
-        if (success && code === '0001') {
-          this.submiting = false
-          this.visible = false
-          this.$emit('refresh')
-          this.createForm = initForm()
-        } else {
-          this.$message({
-            message: '修改失败',
-            type: 'error'
-          })
-        }
-      }
+      //   let { success, code } = await postPageData(formData)
+      //   if (success && code === '0001') {
+      //     this.submiting = false
+      //     this.visible = false
+      //     this.$emit('refresh')
+      //     this.createForm = initForm()
+      //   } else {
+      //     this.$message({
+      //       message: '修改失败',
+      //       type: 'error'
+      //     })
+      //   }
+      // }
+      // if (this.title === '修改') {
+      //   const formData = {
+      //     ...this.formItem,
+      //     ...this.createForm
+      //   }
+      //   console.log('formData', formData)
+      //   let { success, code } = await putPageData(formData)
+      //   if (success && code === '0001') {
+      //     this.submiting = false
+      //     this.visible = false
+      //     this.$emit('refresh')
+      //     this.createForm = initForm()
+      //   } else {
+      //     this.$message({
+      //       message: '修改失败',
+      //       type: 'error'
+      //     })
+      //   }
+      // }
     },
     close() {
       this.visible = false

@@ -1,24 +1,22 @@
 <template>
   <div class="pagination__container" flex="dir:top justify:center">
-    <div flex-box="1" class="s-mg-b-20">
+    <div flex-box="1" flex="dir:top" class="s-mg-b-20">
       <el-table :data="tableData" style="width: 100%">
-        <el-table-column prop="date" label="日期" width="180"></el-table-column>
-        <el-table-column prop="name" label="姓名" width="180"></el-table-column>
-        <el-table-column prop="id" label="ID" width="180"></el-table-column>
+        <el-table-column prop="name" label="姓名"></el-table-column>
+        <el-table-column prop="date" label="日期"></el-table-column>
+        <el-table-column prop="id" label="ID"></el-table-column>
         <el-table-column prop="address" label="地址"></el-table-column>
       </el-table>
     </div>
-    <div>
-      <pagination
-        class="pagination"
-        :current-page.sync="defaultParams.page"
-        :page-size.sync="defaultParams.pageSize"
-        :total="total"
-        small
-        @current-change="handleFetch()"
-        @size-change="handleRefresh()"
-      />
-    </div>
+    <pagination
+      class="pagination"
+      :current-page.sync="defaultParams.page"
+      :page-size.sync="defaultParams.pageSize"
+      :total="total"
+      small
+      @current-change="handleFetch()"
+      @size-change="handleRefresh()"
+    />
   </div>
 </template>
 
@@ -47,7 +45,7 @@ export default {
      */
     async handleFetch() {
       this.loading = true
-      const data = await getTableData(this.defaultParams)
+      const { data } = await getTableData(this.defaultParams)
       this.loading = false
       if (!data) {
         this.total = 0
@@ -55,7 +53,6 @@ export default {
         return
       }
       this.total = data.total || 0
-      // console.log('data', data)
       this.tableData = data.content || []
     },
     /**
@@ -69,13 +66,13 @@ export default {
   created() {
     this.handleFetch()
     // test data
-    postTableData(
-      JSON.stringify({
-        date: '2016-05-02',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      })
-    )
+    // postTableData(
+    //   JSON.stringify({
+    //     date: '2016-05-02',
+    //     name: '王小虎',
+    //     address: '上海市普陀区金沙江路 1518 弄'
+    //   })
+    // )
   }
 }
 </script>
