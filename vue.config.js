@@ -54,6 +54,7 @@ module.exports = {
   },
   // 代理配置
   devServer: {
+    // mock
     before(app) {
       apiMocker(app, resolve(__dirname, './mock/index.js'))
     }
