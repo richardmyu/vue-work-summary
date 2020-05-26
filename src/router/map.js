@@ -19,51 +19,51 @@ const load = (item, name) => {
 }
 
 const MAPS = [
-  {
-    id: '2',
-    title: 'vue',
-    pid: null
-  },
-  {
-    id: '2-1',
-    title: 'vue-slot',
-    pid: '2'
-  },
-  {
-    id: '2-1-1',
-    title: 'slot-default',
-    path: `${VUE_PATH}${VUESLOT_PATH}default`,
-    pid: '2-1'
-  },
-  {
-    id: '2-1-2',
-    title: 'slot-named',
-    path: `${VUE_PATH}${VUESLOT_PATH}named`,
-    pid: '2-1'
-  },
-  {
-    id: '2-1-3',
-    title: 'slot-scope',
-    path: `${VUE_PATH}${VUESLOT_PATH}scope`,
-    pid: '2-1'
-  },
-  {
-    id: '2-2',
-    title: 'vue-ejs',
-    pid: '2'
-  },
-  {
-    id: '2-2-1',
-    title: 'ejs-one',
-    path: `${VUE_PATH}${VUEEJS_PATH}one`,
-    pid: '2-2'
-  },
-  {
-    id: '2-2-2',
-    title: 'ejs-two',
-    path: `${VUE_PATH}${VUEEJS_PATH}two`,
-    pid: '2-2'
-  },
+  // {
+  //   id: '2',
+  //   title: 'vue',
+  //   pid: null
+  // },
+  // {
+  //   id: '2-1',
+  //   title: 'vue-slot',
+  //   pid: '2'
+  // },
+  // {
+  //   id: '2-1-1',
+  //   title: 'slot-default',
+  //   path: `${VUE_PATH}${VUESLOT_PATH}default`,
+  //   pid: '2-1'
+  // },
+  // {
+  //   id: '2-1-2',
+  //   title: 'slot-named',
+  //   path: `${VUE_PATH}${VUESLOT_PATH}named`,
+  //   pid: '2-1'
+  // },
+  // {
+  //   id: '2-1-3',
+  //   title: 'slot-scope',
+  //   path: `${VUE_PATH}${VUESLOT_PATH}scope`,
+  //   pid: '2-1'
+  // },
+  // {
+  //   id: '2-2',
+  //   title: 'vue-ejs',
+  //   pid: '2'
+  // },
+  // {
+  //   id: '2-2-1',
+  //   title: 'ejs-one',
+  //   path: `${VUE_PATH}${VUEEJS_PATH}one`,
+  //   pid: '2-2'
+  // },
+  // {
+  //   id: '2-2-2',
+  //   title: 'ejs-two',
+  //   path: `${VUE_PATH}${VUEEJS_PATH}two`,
+  //   pid: '2-2'
+  // },
   {
     id: '3',
     title: 'component',
@@ -87,18 +87,18 @@ const MAPS = [
     path: `${CUSTOMCOMPONENT_PATH}pagination`,
     pid: '3'
   },
-  {
-    id: '3-4',
-    title: 'auth',
-    path: `${CUSTOMCOMPONENT_PATH}auth`,
-    pid: '3'
-  },
-  {
-    id: '3-5',
-    title: 'tree',
-    path: `${CUSTOMCOMPONENT_PATH}tree`,
-    pid: '3'
-  },
+  // {
+  //   id: '3-4',
+  //   title: 'auth',
+  //   path: `${CUSTOMCOMPONENT_PATH}auth`,
+  //   pid: '3'
+  // },
+  // {
+  //   id: '3-5',
+  //   title: 'tree',
+  //   path: `${CUSTOMCOMPONENT_PATH}tree`,
+  //   pid: '3'
+  // },
   {
     id: '3-6',
     title: 'screen-full',
